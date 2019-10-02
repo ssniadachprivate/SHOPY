@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="container">
+
+    <div class="header__content">
+      <img class="logo" src="assets/img/logo.png" alt="logo">
+
+      <div class="header__collapse" (click)="toggleMenu()">
+        <div class="header__collapse-icon"></div>
+      </div>
+
+      <ul #headerList class="header__list">
+        <ng-container *ngFor="let item of menuList; let i = index">
+          <li class="header__item" [ngClass]="{'active': selectedItem === i}" (click)="select(i)">{{item.name}}</li>
+        </ng-container>
+      </ul>
+    </div>
+
+  </div>
+</header>

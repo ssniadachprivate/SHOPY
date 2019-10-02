@@ -1,0 +1,96 @@
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/color";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $gray;
+  padding: 5px 0;
+  background: $background;
+  z-index: 50;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(md) {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__list {
+    color: $dark-text;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  &__list.show {
+    display: flex;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 15px 0;
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
+  &__item.active {
+    color: $light-blue;
+  }
+
+  &__collapse {
+    border: 2px solid #5b5b5b;
+    border-radius: 5px;
+    padding: 3px 7px;
+    cursor: pointer;
+  }
+  &__collapse-icon {
+    background: url("src/assets/img/menu.svg") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    padding: 10px;
+  }
+}
+
+.logo {
+  max-height: 45px;
+  margin-right: 100px;
+}
+
+@include media(md) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header__collapse {
+    display: none;
+  }
+
+  .header__item {
+    padding: 15px 30px;
+  }
+
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    border: none;
+  }
+
+
+}

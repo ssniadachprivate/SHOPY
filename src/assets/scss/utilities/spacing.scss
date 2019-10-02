@@ -1,0 +1,40 @@
+@import "abstracts/variables";
+
+$sides: (top, bottom, left, right);
+
+@for $i from 1 through 10 {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$i * 5} {
+      margin-#{$side}: #{$i * 5}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$i * 5} {
+      padding-#{$side}: #{$i * 5}px !important;
+    }
+  }
+
+  .m-#{$i * 5} {
+    margin: #{$i * 5}px !important;
+  }
+
+  .p-#{$i * 5} {
+    padding: #{$i * 5}px !important;
+  }
+
+  .m-v-#{$i * 5} {
+    margin: #{$i * 5}px 0px !important;
+  }
+
+  .p-v-#{$i * 5} {
+    padding: #{$i * 5}px 0px !important;
+  }
+
+  .m-h-#{$i * 5} {
+    margin: 0px #{$i * 5}px !important;
+  }
+
+  .p-h-#{$i * 5} {
+    padding: 0px #{$i * 5}px !important;
+  }
+
+}
