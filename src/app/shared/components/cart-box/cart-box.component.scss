@@ -1,0 +1,35 @@
+@import "abstracts/color";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+.cart-box {
+  background: $light-blue;
+  padding: rem(25px);
+  color: $white;
+
+  &__element-title {
+    font-size: rem(16px);
+    font-weight: bold;
+    margin-bottom: rem(20px);
+    display: flex;
+    align-items: center;
+  }
+
+  &__element-img {
+    height: rem(25px);
+    margin-right: rem(15px);
+  }
+
+  &__element-text {
+    font-size: rem(13px);
+    font-family: $second-font;
+    color: rgba(255,255,255,0.8);
+  }
+
+  &__element-cart {
+    border: 1px dashed $white;
+    min-height: rem(100px);
+    position: relative;
+  }
+
+}

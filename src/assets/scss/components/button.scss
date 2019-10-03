@@ -2,7 +2,17 @@
 
 .btn {
   border: none;
-  padding: 10px 15px;
+  padding: 10px 30px;
   cursor: pointer;
-  min-width: 230px;
+  text-align: center;
+
+  &--green {
+    color: $white;
+    background: $accent;
+    font-weight: bold;
+  }
+
+  &.added {
+    background: rgba(47, 218, 127, 0.47);
+  }
 }

@@ -1,0 +1,40 @@
+@import "abstracts/variables";
+@import "abstracts/color";
+@import "abstracts/functions";
+
+.info-box {
+  width: 100%;
+  max-width: 670px;
+  background: $white;
+  padding: rem(40px) rem(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+  &__img-wrapper, &__title {
+    text-align: center;
+  }
+
+  &__img {
+    height: rem(80px);
+    margin-bottom: rem(40px);
+  }
+
+  &__title {
+    color: #4E5259;
+    font-size: rem(24px);
+    font-weight: bold;
+    margin-bottom: rem(20px);
+  }
+
+  &__text {
+    font-family: $second-font;
+    font-size: rem(18px);
+    text-align: justify;
+    color: #323232;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -10,7 +10,10 @@
 
       <ul #headerList class="header__list">
         <ng-container *ngFor="let item of menuList; let i = index">
-          <li class="header__item" [ngClass]="{'active': selectedItem === i}" (click)="select(i)">{{item.name}}</li>
+          <li class="header__item"
+              [routerLink]="[item.url]"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">{{item.name}}</li>
         </ng-container>
       </ul>
     </div>
