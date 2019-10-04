@@ -11,12 +11,17 @@
   <div class="cart-box__element mt-30">
     <div class="cart-box__element-title">
       <img class="cart-box__element-img" src="assets/img/cart.svg" alt="cart icon">
-      Cart
+      Cart <span class="ml-5" *ngIf="cart.length">({{cart.length}})</span>
     </div>
     <div class="cart-box__element-cart">
-      <div class="center-abs-vh">
-        Cart is empty
-      </div>
+      <ng-container *ngIf="cart">
+        <div class="cart-item mb-5" *ngFor="let product of cart" title="{{product.title}}">{{product.title}}</div>
+      </ng-container>
+      <ng-container *ngIf="!cart.length">
+        <div class="center-abs-vh">
+          Cart is empty
+        </div>
+      </ng-container>
     </div>
   </div>
 

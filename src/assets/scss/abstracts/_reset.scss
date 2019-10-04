@@ -43,10 +43,6 @@ ol, ul {
   list-style: none;
 }
 
-input {
-  outline: none;
-}
-
 blockquote, q {
   quotes: none;
 }
@@ -71,6 +67,7 @@ a, a:hover, a:focus, a:active {
 *, :after, :before {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 :host {

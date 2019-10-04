@@ -1,9 +1,10 @@
-import {Component, Input, OnInit, TemplateRef} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-info-box',
   templateUrl: './info-box.component.html',
-  styleUrls: ['./info-box.component.scss']
+  styleUrls: ['./info-box.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoBoxComponent implements OnInit {
 

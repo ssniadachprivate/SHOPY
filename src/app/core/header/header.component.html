@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="header__content">
-      <img class="logo" src="assets/img/logo.png" alt="logo">
+      <img class="logo" src="assets/img/logo.png" alt="logo" [routerLink]="['/']">
 
       <div class="header__collapse" (click)="toggleMenu()">
         <div class="header__collapse-icon"></div>
@@ -15,6 +15,9 @@
               routerLinkActive="active"
               [routerLinkActiveOptions]="{exact: true}">{{item.name}}</li>
         </ng-container>
+        <li>
+          <img class="header__item" src="assets/img/search.svg" alt="">
+        </li>
       </ul>
     </div>
 

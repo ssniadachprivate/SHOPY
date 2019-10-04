@@ -2,13 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AppComponent} from "@app/app.component";
 import {HeaderComponent} from "@core/header/header.component";
-import {ProductBoxComponent} from "@shared/components/product-box/product-box.component";
-import {InfoBoxComponent} from "@shared/components/info-box/info-box.component";
 import {HomeModule} from "@modules/home/home.module";
 import {AboutModule} from "@modules/about/about.module";
 import {ContactModule} from "@modules/contact/contact.module";
 import {AppRoutingModule} from "@app/app-routing.module";
 import {SharedModule} from "@shared/shared.module";
+import {StoreModule} from "@ngrx/store";
+import {ProductReducer} from "@core/state/products/products.reducer";
+import {EffectsModule} from "@ngrx/effects";
+import {ProductsEffects} from "@core/state/products/products.effects";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -19,6 +22,9 @@ import {SharedModule} from "@shared/shared.module";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    StoreModule.forRoot({ products: ProductReducer }),
+    EffectsModule.forRoot([ProductsEffects]),
     SharedModule,
     HomeModule,
     AboutModule,

@@ -1,15 +1,15 @@
-<div class="product-box">
+<div class="product-box" [routerLink]="['/details/', product.id]">
 
   <div class="product-box__img-wrapper">
-    <img class="product-box__img" src="https://image.ceneostatic.pl/data/products/59714666/i-dell-xps-13-9370-13-3-i7-8gb-256gb-win10-93703827ktr.jpg" alt="">
+    <img class="product-box__img" src="{{product.thumbnailUrl}}" alt="">
   </div>
 
   <div class="product-box__title">
-    Laptop Dell
+    {{product.title}}
   </div>
 
   <div class="product-box__description">
-    Lorem ipsum dolor sit amet.
+    {{product.description}}
   </div>
 
 </div>

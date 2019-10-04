@@ -69,6 +69,7 @@
 .logo {
   max-height: 45px;
   margin-right: 100px;
+  cursor: pointer;
 }
 
 @include media(md) {

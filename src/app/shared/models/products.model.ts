@@ -1,6 +1,8 @@
 export interface ProductsModel {
-  "id": number;
-  "title": string;
-  "url": string;
-  "thumbnailUrl": string;
+  id: number;
+  title: string;
+  albumId?: number;
+  url: string;
+  thumbnailUrl: string;
+  description: string;
 }
