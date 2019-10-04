@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Download project
 
-Run `git clone https://github.com/ssniadachprivate/Shopy.git`
+Run `git clone https://github.com/ssniadachprivate/Shopy.git`. After, in project folder run `npm install`.
 
 ## Development server
 
